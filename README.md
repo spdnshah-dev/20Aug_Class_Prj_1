@@ -4,6 +4,9 @@ The website for the salon. It has 9 pages (Home, Services & prices, Book, Galler
 
 It is hosted on **Vercel**. Every time a change is saved to the `main` branch on GitHub, Vercel rebuilds the site and puts the new version live within a few minutes. You never need to "upload" anything by hand.
 
+- **Live address (for now):** https://20-aug-class-prj-1.vercel.app — this stays blank/failed until every detail in `content/site.ts` is filled in (see section 2).
+- **Vercel project:** `20-aug-class-prj-1`, production branch `main`.
+
 ---
 
 ## 1. Changing salon details (prices, hours, team, reviews…)

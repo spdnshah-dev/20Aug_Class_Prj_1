@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+:root {
+  --ink: #1a1a1a;
+  --surface: #ffffff;
+  --surface-alt: #f4f2ef;
+  --line: #e4e0da;
+  --line-strong: #cfc9c1;
+  --muted: #4a4640;
+  --brand: #0e5e5b;
+  --brand-hover: #0a4644;
+  --brand-tint: #e3efee;
+  --on-brand-muted: #d8e8e6;
+  --whatsapp: #1e7a46;
+  --star: #b26b00;
+  --footer-text: #c9c4bc;
+  --footer-muted: #a8a29a;
+  --footer-line: #3a3835;
+  --placeholder-bg: #e4e0da;
+  --placeholder-border: #b8b1a7;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body), "Segoe UI", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Jump links (e.g. service categories) stop below the sticky header. */
+[id] {
+  scroll-margin-top: 96px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: calc(1240px + 48px);
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  @media (min-width: 640px) {
+    .container-site {
+      padding-inline: 24px;
+    }
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+
+  .link-arrow {
+    font-weight: 700;
+    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .link-arrow:hover {
+    color: var(--brand-hover);
+  }
+
+  /* Native FAQ disclosure triangles, styled to match the mockup. */
+  .faq summary {
+    list-style: none;
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+}
